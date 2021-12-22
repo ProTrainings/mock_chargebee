@@ -1,2 +1,1 @@
-# mock_chargebee
-MockChargebee is a drop in mocking library for testing with Chargebee.
+Moved to Gitlab https://gitlab.com/bonusly/public/mock_chargebee

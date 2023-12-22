@@ -2,9 +2,9 @@
 
 module MockChargebee
   module Validations
-    module ItemPrice
+    module Item
       class CreateParams < Base
-        REQUIRED_KEYS = %w[id name item_id currency_code]
+        REQUIRED_KEYS = %w[id name].freeze
       end
     end
   end

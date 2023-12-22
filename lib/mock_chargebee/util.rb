@@ -3,7 +3,7 @@
 module MockChargebee
   module Util
     def self.parse_path_from_url(url)
-      ParsedPath.new(*url.delete_prefix("/").split("/"))
+      ParsedPath.new(*url.delete_prefix('/').split('/'))
     end
 
     def self.parse_params(params)
@@ -31,9 +31,9 @@ module MockChargebee
         when Hash
           transformed_val = deep_transform_values!(val)
           hash.store(key, transformed_val)
-        when "true"
+        when 'true'
           hash.store(key, true)
-        when "false"
+        when 'false'
           hash.store(key, false)
         when /^\d+\.\d+$/
           hash.store(key, val.to_f)

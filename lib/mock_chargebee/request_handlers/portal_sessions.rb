@@ -7,7 +7,7 @@ module MockChargebee
 
       def post
         portal_session = Models::PortalSession.create(params)
-        { portal_session: portal_session }
+        { portal_session: }
       end
     end
   end

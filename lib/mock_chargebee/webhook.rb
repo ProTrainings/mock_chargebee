@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MockChargebee
   class Webhook
     def initialize(event_type, event_attributes = {}, content_attributes = {})
@@ -9,7 +11,7 @@ module MockChargebee
     def call
       Validations::Webhooks::EventAttributes.validate_allowed(event_attributes)
 
-      event_attributes.merge!("content" => content_attributes)
+      event_attributes.merge!('content' => content_attributes)
       response = fixture.deep_merge(event_attributes)
 
       response.to_json

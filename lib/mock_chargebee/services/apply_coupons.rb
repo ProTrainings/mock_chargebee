@@ -12,10 +12,10 @@ module MockChargebee
 
         coupons.map do |coupon|
           {
-            "coupon_id" => coupon["id"],
-            "apply_till" => apply_till_from(coupon),
-            "applied_count" => 1,
-            "coupon_code" => nil,
+            'coupon_id' => coupon['id'],
+            'apply_till' => apply_till_from(coupon),
+            'applied_count' => 1,
+            'coupon_code' => nil
           }
         end
       end
@@ -31,9 +31,9 @@ module MockChargebee
       end
 
       def apply_till_from(coupon)
-        return nil unless coupon["duration_period"] == "limited_period"
+        return nil unless coupon['duration_period'] == 'limited_period'
 
-        (Date.today >> coupon["duration_month"]).to_time.to_i
+        (Date.today >> coupon['duration_month']).to_time.to_i
       end
     end
   end

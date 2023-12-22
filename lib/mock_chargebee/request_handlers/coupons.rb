@@ -8,7 +8,7 @@ module MockChargebee
       def post
         coupon = Models::Coupon.create(params)
 
-        { coupon: coupon }
+        { coupon: }
       end
     end
   end

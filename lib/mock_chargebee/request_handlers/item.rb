@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 module MockChargebee
   module RequestHandlers
-    class ItemPrices < Base
+    class Items < Base
       private
 
       def post
-        item_price = Models::ItemPrice.create(params)
-        { item_price: item_price }
+        item = Models::Item.create(params)
+        { item: }
       end
 
       def get
-        item_price = Models::ItemPrice.find(id)
-        { item_price: item_price }
+        item = Models::Item.find(id)
+        { item: }
       end
     end
   end

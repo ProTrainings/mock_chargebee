@@ -12,13 +12,13 @@ module MockChargebee
                  Models::Plan.update(id, params)
                end
 
-        { plan: plan }
+        { plan: }
       end
 
       def get
         plan = Models::Plan.find(id)
 
-        { plan: plan }
+        { plan: }
       end
     end
   end

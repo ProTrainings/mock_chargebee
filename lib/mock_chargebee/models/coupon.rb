@@ -3,7 +3,7 @@
 module MockChargebee
   module Models
     class Coupon < Base
-      RESOURCE_ID_PREFIX = "coup"
+      RESOURCE_ID_PREFIX = 'coup'
 
       load_fixtures :coupon
 
@@ -14,9 +14,9 @@ module MockChargebee
       def self.create(params)
         Validations::Coupons::CreateParams.validate_required(params)
 
-        params["id"] ||= unique_id
+        params['id'] ||= unique_id
         coupon = coupon_fixture.merge(params)
-        repositories.coupons.store(coupon["id"], coupon)
+        repositories.coupons.store(coupon['id'], coupon)
 
         coupon
       end

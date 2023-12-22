@@ -15,7 +15,9 @@ module MockChargebee
                      :coupons,
                      :portal_sessions,
                      :plans,
-                     :payment_sources
+                     :payment_sources,
+                     :item_prices,
+                     :items
 
     class RepoHash < Hash
       def fetch(*)

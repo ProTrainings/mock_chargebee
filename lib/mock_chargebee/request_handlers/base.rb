@@ -28,7 +28,8 @@ module MockChargebee
         args.each do |arg|
           define_method("#{arg}_fixture") do
             instance_variable_get("@#{arg}_fixture") ||
-              instance_variable_set("@#{arg}_fixture", JSON.parse(File.read("#{File.dirname(__FILE__)}/../fixtures/#{arg}.json")))
+              instance_variable_set("@#{arg}_fixture",
+                                    JSON.parse(File.read("#{File.dirname(__FILE__)}/../fixtures/#{arg}.json")))
           end
         end
       end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MockChargebee
   module RequestHandlers
     class PaymentSources < Base
@@ -7,7 +9,7 @@ module MockChargebee
         customer = Models::Customer.find(params['customer_id'])
         payment_source = Models::PaymentSource.create(params)
 
-        { customer: customer, payment_source: payment_source }
+        { customer:, payment_source: }
       end
     end
   end

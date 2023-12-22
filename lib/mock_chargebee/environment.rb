@@ -2,7 +2,7 @@
 
 module MockChargebee
   class Environment
-    API_VERSION = "v2"
+    API_VERSION = 'v2'
 
     attr_reader :repositories
 
